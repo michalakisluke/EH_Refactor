@@ -77,7 +77,7 @@ function doProcesstrades(ddata) {
 
         // 2) collect unique symbols  - Done
 
-        // removed line about symbols, but into initial creation of a to prevent constantly looping and checking the value of a
+        // removed line about symbols, put into initial creation of a to prevent constantly looping and checking the value of a
         // changed if statement looking for less than zero, indexOf only returns -1 if not found
         // changed .concat to .push, faster method saves time
 
@@ -89,8 +89,8 @@ function doProcesstrades(ddata) {
 
         // 3) handle missing names  - Done
 
-        // Simplify if statement to solely look for if b.companyName is returned, the API either won't return it or will, it won't return bad data
-        // Set b.companyName only to b['symbol'], '?????' are not useable for companyName 
+        // Simplify if statement to solely look for if b.companyName is returned, the API either won't return it or will
+        // Set b.companyName only to b['symbol'], '?????' is not useable for companyName 
 
         if (!b.companyName) {
             b.companyName = b['symbol'];
